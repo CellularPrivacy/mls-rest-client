@@ -2,17 +2,12 @@ package com.github.cellularprivacy.mlsrestclient.dto;
 
 import java.util.List;
 
-/**
- * Created by larsgrefer on 26.04.16.
- */
 public class GeolocateBody {
-
 
     /**
      * The clear text name of the cell carrier / operator.
      */
     public String carrier;
-
 
     /**
      * Should the clients IP address be used to locate it, defaults to true.

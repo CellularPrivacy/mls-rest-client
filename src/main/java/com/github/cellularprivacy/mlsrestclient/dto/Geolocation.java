@@ -1,5 +1,8 @@
 package com.github.cellularprivacy.mlsrestclient.dto;
 
+/**
+ * @see <a href="https://mozilla.github.io/ichnaea/api/geolocate.html#response">https://mozilla.github.io/ichnaea/api/geolocate.html#response</a>
+ */
 public class Geolocation {
 
     public Location location;

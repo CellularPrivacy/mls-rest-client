@@ -9,15 +9,16 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
 
-
-@SuppressWarnings("unused")
+/**
+ * @see <a href="https://mozilla.github.io/ichnaea/api/index.html">https://mozilla.github.io/ichnaea/api/index.html</a>
+ */
 public interface MlsService {
 
     /**
      * Determine the current location based on data provided about nearby Bluetooth, cell or WiFi networks and based on the IP address used to access the service.
      *
-     * @param request
-     * @return
+     * @return A successful response returns a position estimate and an accuracy field.
+     * @see <a href="https://mozilla.github.io/ichnaea/api/geolocate.html>https://mozilla.github.io/ichnaea/api/geolocate.html</a>
      */
     @POST("v1/geolocate")
     Call<Geolocation> geolocate(
@@ -27,7 +28,7 @@ public interface MlsService {
     /**
      * Determine the current region based on data provided about nearby Bluetooth, cell or WiFi networks and based on the IP address used to access the service.
      *
-     * @return
+     * @see <a href="https://mozilla.github.io/ichnaea/api/region.html">https://mozilla.github.io/ichnaea/api/region.html</a>
      */
     @POST("v1/country")
     Call<Country> region(
@@ -37,8 +38,8 @@ public interface MlsService {
     /**
      * Submit data about nearby Bluetooth beacons, cell or WiFi networks.
      *
-     * @param request
      * @return Successful requests return a HTTP 200 response with a body of an empty JSON object.
+     * @see <a href="https://mozilla.github.io/ichnaea/api/geosubmit2.html">https://mozilla.github.io/ichnaea/api/geosubmit2.html</a>
      */
     @POST("v2/geosubmit")
     Call<JsonObject> geosubmit2(

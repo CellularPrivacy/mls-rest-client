@@ -1,8 +1,5 @@
 package com.github.cellularprivacy.mlsrestclient.dto;
 
-/**
- * Created by larsgrefer on 26.04.16.
- */
 public class Fallbacks {
 
     /**
