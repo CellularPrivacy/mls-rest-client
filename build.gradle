@@ -12,7 +12,7 @@ repositories {
     jcenter()
 }
 
-group = "com.github.cellularprivacy"
+group = "com.github.CellularPrivacy"
 
 apply plugin: 'io.freefair.git-version'
 apply plugin: 'java'
