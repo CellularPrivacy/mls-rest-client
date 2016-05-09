@@ -27,3 +27,24 @@ dependencies {
     testCompile 'junit:junit:4.12'
     testCompile 'com.squareup.okhttp3:logging-interceptor:3.+'
 }
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.allJava
+    classifier "sources"
+}
+
+javadoc.failOnError = false;
+javadoc.options.links "http://square.github.io/retrofit/2.x/retrofit/"
+javadoc.options.links "http://square.github.io/okhttp/3.x/okhttp/"
+javadoc.options.links "http://docs.oracle.com/javase/7/docs/api/"
+
+task javadocJar(type: Jar) {
+    from javadoc.getDestinationDir()
+    classifier "javadoc"
+    dependsOn javadoc
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
